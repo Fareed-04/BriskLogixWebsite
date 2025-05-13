@@ -1,6 +1,5 @@
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer';
 
-// Export a function that matches Vercel's serverless function format
 export default async function handler(req, res) {
   // Set CORS headers to allow requests from any origin
   res.setHeader('Access-Control-Allow-Credentials', true);
