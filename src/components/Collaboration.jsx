@@ -36,14 +36,74 @@ const Collaboration = () => {
     service: '',
     description: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    setIsSubmitting(true);
+    setSubmitError(null);
+    
+    try {
+      // Check if we're in development or production
+      const isDevelopment = import.meta.env.DEV;
+      
+      if (isDevelopment) {
+        // In development, just simulate a successful response
+        console.log('Form submitted in development mode:', formData);
+        
+        // Simulate API delay
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        // Simulate successful submission
+        setSubmitSuccess(true);
+        setFormData({
+          name: '',
+          company: '',
+          phone: '',
+          email: '',
+          service: '',
+          description: ''
+        });
+      } else {
+        // In production, send the request to the API
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        
+        const data = await response.json();
+        
+        if (!response.ok) {
+          throw new Error(data.error || 'Something went wrong. Please try again.');
+        }
+        
+        setSubmitSuccess(true);
+        setFormData({
+          name: '',
+          company: '',
+          phone: '',
+          email: '',
+          service: '',
+          description: ''
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitError(error.message || 'Failed to submit form. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
+    if (submitSuccess) setSubmitSuccess(false);
+    if (submitError) setSubmitError(null);
+    
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -94,6 +154,19 @@ const Collaboration = () => {
                   <h3 className="h4 mb-8 text-center text-[#AC6AFF]">
                     Let's build the future together
                   </h3>
+                  
+                  {submitSuccess && (
+                    <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-500">
+                      <p className="text-center">Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                    </div>
+                  )}
+                  
+                  {submitError && (
+                    <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-500">
+                      <p className="text-center">{submitError}</p>
+                    </div>
+                  )}
+                  
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Name and Company Name Row */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -105,6 +178,7 @@ const Collaboration = () => {
                           value={formData.name}
                           onChange={handleChange}
                           className="w-full px-4 py-2 bg-n-8 border border-[#AC6AFF] rounded-lg text-white focus:outline-none focus:border-[#AC6AFF]"
+                          disabled={isSubmitting}
                           required
                         />
                       </div>
@@ -116,6 +190,7 @@ const Collaboration = () => {
                           value={formData.company}
                           onChange={handleChange}
                           className="w-full px-4 py-2 bg-n-8 border border-[#AC6AFF] rounded-lg text-white focus:outline-none focus:border-[#AC6AFF]"
+                          disabled={isSubmitting}
                           required
                         />
                       </div>
@@ -131,6 +206,7 @@ const Collaboration = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full px-4 py-2 bg-n-8 border border-[#AC6AFF] rounded-lg text-white focus:outline-none focus:border-[#AC6AFF]"
+                          disabled={isSubmitting}
                           required
                         />
                       </div>
@@ -142,6 +218,7 @@ const Collaboration = () => {
                           value={formData.email}
                           onChange={handleChange}
                           className="w-full px-4 py-2 bg-n-8 border border-[#AC6AFF] rounded-lg text-white focus:outline-none focus:border-[#AC6AFF]"
+                          disabled={isSubmitting}
                           required
                         />
                       </div>
@@ -154,6 +231,7 @@ const Collaboration = () => {
                         value={formData.service}
                         onChange={handleChange}
                         className="w-full px-4 py-2 bg-n-8 border border-[#AC6AFF] rounded-lg text-white focus:outline-none focus:border-[#AC6AFF]"
+                        disabled={isSubmitting}
                         required
                       >
                         <option value="">Select a service</option>
@@ -171,14 +249,16 @@ const Collaboration = () => {
                         value={formData.description}
                         onChange={handleChange}
                         className="w-full px-4 py-2 bg-n-8 border border-[#AC6AFF] rounded-lg text-white focus:outline-none focus:border-[#AC6AFF] h-32"
+                        disabled={isSubmitting}
                         required
                       />
                     </div>
                     <button
                       type="submit"
-                      className="w-full px-6 py-3 bg-[#AC6AFF] text-white rounded-lg hover:opacity-90 transition-opacity"
+                      className="w-full px-6 py-3 bg-[#AC6AFF] text-white rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+                      disabled={isSubmitting}
                     >
-                      Submit
+                      {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
                   </form>
                 </div>
