@@ -1,6 +1,7 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
+const config = require('./config');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   // Set CORS headers to allow requests from any origin
   res.setHeader('Access-Control-Allow-Credentials', true);
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -16,12 +17,23 @@ export default async function handler(req, res) {
     return;
   }
 
+  // For debugging - log environment variables (except sensitive ones)
+  console.log('EMAIL_HOST:', process.env.EMAIL_HOST);
+  console.log('EMAIL_PORT:', process.env.EMAIL_PORT);
+  console.log('EMAIL_SECURE:', process.env.EMAIL_SECURE);
+  console.log('EMAIL_TLS:', process.env.EMAIL_TLS);
+  console.log('EMAIL_USER is set:', !!process.env.EMAIL_USER);
+  console.log('EMAIL_PASS is set:', !!process.env.EMAIL_PASS);
+
   // Handle non-POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
+    // Debugging - log request body
+    console.log('Request body:', req.body);
+    
     const { name, company, phone, email, service, description } = req.body;
 
     // Validate required fields
@@ -29,20 +41,25 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
-    // Configure email transporter with expanded configuration options
-    const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST || 'smtp.gmail.com',
-      port: parseInt(process.env.EMAIL_PORT || '587'),
-      secure: process.env.EMAIL_SECURE === 'true',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      tls: {
-        enabled: process.env.EMAIL_TLS === 'true',
-        rejectUnauthorized: false
-      }
+    // Log transporter config (without sensitive data)
+    console.log('SMTP Config:', {
+      ...config.smtp,
+      auth: { user: config.smtp.auth.user, pass: '***HIDDEN***' }
     });
+    
+    const transporter = nodemailer.createTransport(config.smtp);
+
+    // Verify transporter configuration
+    try {
+      await transporter.verify();
+      console.log('Transporter verified successfully');
+    } catch (verifyError) {
+      console.error('Transporter verification failed:', verifyError);
+      return res.status(500).json({ 
+        error: 'Email configuration error', 
+        details: verifyError.message 
+      });
+    }
 
     // Email content
     const emailContent = `
@@ -55,21 +72,19 @@ export default async function handler(req, res) {
       <p><strong>Project Description:</strong> ${description}</p>
     `;
 
-    // Recipient emails
-    const recipients = ['hammad@brisklogix.com', 'fareedudin2004@gmail.com'];
-
     // Send emails to both recipients
-    const emailPromises = recipients.map(recipient => {
+    const emailPromises = config.recipients.map(recipient => {
       return transporter.sendMail({
-        from: process.env.EMAIL_USER,
+        from: config.smtp.auth.user,
         to: recipient,
         subject: `New Contact Form Submission: ${service}`,
         html: emailContent,
       });
     });
 
-    await Promise.all(emailPromises);
-    
+    const emailResults = await Promise.all(emailPromises);
+    console.log('Email sending results:', emailResults);
+
     // If there's a redirect URL configured, include it in the response
     const redirectUrl = process.env.EMAIL_REDIRECT;
     const response = { success: true };
@@ -78,9 +93,14 @@ export default async function handler(req, res) {
       response.redirectUrl = redirectUrl;
     }
 
+    console.log('Sending success response');
     res.status(200).json(response);
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Failed to send email', details: error.message });
+    res.status(500).json({ 
+      error: 'Failed to send email', 
+      details: error.message,
+      stack: error.stack
+    });
   }
 } 

@@ -1,0 +1,10 @@
+{
+  "name": "brisklogix-api",
+  "version": "1.0.0",
+  "description": "API endpoints for BriskLogix website",
+  "main": "contact.js",
+  "dependencies": {
+    "nodemailer": "^6.9.13"
+  },
+  "type": "commonjs"
+} 

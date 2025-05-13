@@ -69,6 +69,8 @@ const Collaboration = () => {
       } else {
         // In production, send the request to the API
         try {
+          console.log('Sending form data to API:', formData);
+          
           const response = await fetch('/api/contact', {
             method: 'POST',
             headers: {
@@ -79,15 +81,26 @@ const Collaboration = () => {
           
           // Check if the response is JSON
           const contentType = response.headers.get("content-type");
-          if (!contentType || !contentType.includes("application/json")) {
-            console.error('Non-JSON response received:', await response.text());
-            throw new Error("Server returned a non-JSON response. Please try again later.");
+          
+          let data;
+          let errorText = '';
+          
+          try {
+            if (contentType && contentType.includes("application/json")) {
+              data = await response.json();
+            } else {
+              // If not JSON, get the text and log it
+              errorText = await response.text();
+              console.error('Non-JSON response received:', errorText);
+              throw new Error("Server returned a non-JSON response. Please try again later.");
+            }
+          } catch (parseError) {
+            console.error('Error parsing response:', parseError);
+            throw new Error(`Failed to parse server response. ${errorText ? `Response text: ${errorText.substring(0, 100)}...` : ''}`);
           }
           
-          const data = await response.json();
-          
           if (!response.ok) {
-            throw new Error(data.error || 'Something went wrong. Please try again.');
+            throw new Error(data.error || data.details || 'Something went wrong. Please try again.');
           }
           
           // Check if there's a redirect URL in the response
