@@ -68,29 +68,56 @@ const Collaboration = () => {
         });
       } else {
         // In production, send the request to the API
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-        
-        const data = await response.json();
-        
-        if (!response.ok) {
-          throw new Error(data.error || 'Something went wrong. Please try again.');
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+          
+          // Check if the response is JSON
+          const contentType = response.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            console.error('Non-JSON response received:', await response.text());
+            throw new Error("Server returned a non-JSON response. Please try again later.");
+          }
+          
+          const data = await response.json();
+          
+          if (!response.ok) {
+            throw new Error(data.error || 'Something went wrong. Please try again.');
+          }
+          
+          // Check if there's a redirect URL in the response
+          if (data.redirectUrl) {
+            // Redirect after a short delay to show the success message
+            setSubmitSuccess(true);
+            setTimeout(() => {
+              window.location.href = data.redirectUrl;
+            }, 2000);
+          } else {
+            // Just show success message without redirect
+            setSubmitSuccess(true);
+          }
+          
+          setFormData({
+            name: '',
+            company: '',
+            phone: '',
+            email: '',
+            service: '',
+            description: ''
+          });
+        } catch (fetchError) {
+          console.error('Fetch error:', fetchError);
+          if (fetchError.message.includes('JSON')) {
+            throw new Error('Server error. This is likely due to a misconfigured API route on the server. Please contact the administrator.');
+          } else {
+            throw new Error('Network error. Please check your connection and try again.');
+          }
         }
-        
-        setSubmitSuccess(true);
-        setFormData({
-          name: '',
-          company: '',
-          phone: '',
-          email: '',
-          service: '',
-          description: ''
-        });
       }
     } catch (error) {
       console.error('Error submitting form:', error);
