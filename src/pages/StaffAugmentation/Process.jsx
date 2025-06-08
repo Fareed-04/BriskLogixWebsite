@@ -19,45 +19,45 @@ const ProcessDiagram = () => {
       title: "Requirements Analysis",
       description: "Understanding your project needs and skill requirements",
       icon: "🔍",
-      color: "from-purple-500 to-purple-700",
-      bgColor: "bg-purple-500/20",
-      borderColor: "border-purple-400/50"
+      color: "from-purple-400 to-purple-600",
+      bgColor: "bg-purple-400/30",
+      borderColor: "border-purple-300/60"
     },
     {
       id: 2,
       title: "Talent Matching",
       description: "Finding perfect developers from our vetted pool",
       icon: "🎯",
-      color: "from-blue-500 to-blue-700",
-      bgColor: "bg-blue-500/20",
-      borderColor: "border-blue-400/50"
+      color: "from-cyan-400 to-blue-600",
+      bgColor: "bg-cyan-400/30",
+      borderColor: "border-cyan-300/60"
     },
     {
       id: 3,
       title: "Interviews & Selection",
       description: "Conducting interviews and technical assessments",
       icon: "💬",
-      color: "from-green-500 to-green-700",
-      bgColor: "bg-green-500/20",
-      borderColor: "border-green-400/50"
+      color: "from-emerald-400 to-green-600",
+      bgColor: "bg-emerald-400/30",
+      borderColor: "border-emerald-300/60"
     },
     {
       id: 4,
       title: "Ongoing Support",
       description: "Continuous monitoring and project support",
       icon: "🛠️",
-      color: "from-orange-500 to-orange-700",
-      bgColor: "bg-orange-500/20",
-      borderColor: "border-orange-400/50"
+      color: "from-amber-400 to-orange-600",
+      bgColor: "bg-amber-400/30",
+      borderColor: "border-amber-300/60"
     },
     {
       id: 5,
       title: "Flexible Scaling",
       description: "Easy team scaling based on project needs",
       icon: "📈",
-      color: "from-pink-500 to-pink-700",
-      bgColor: "bg-pink-500/20",
-      borderColor: "border-pink-400/50"
+      color: "from-rose-400 to-pink-600",
+      bgColor: "bg-rose-400/30",
+      borderColor: "border-rose-300/60"
     }
   ];
 
@@ -274,26 +274,6 @@ const Process = () => {
         <div className="flex justify-center mb-16">
           <ProcessDiagram />
         </div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <p className="text-lg text-n-2 mb-6">
-            Ready to scale your team with top-tier talent?
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-color-1 text-white rounded-lg font-semibold hover:bg-color-1/90 transition-colors duration-300 shadow-lg hover:shadow-color-1/25"
-          >
-            Start Your Journey
-          </motion.button>
-        </motion.div>
       </div>
     </Section>
   );

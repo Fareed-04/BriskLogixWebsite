@@ -49,7 +49,7 @@ const AlternativeHero = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-8 sm:mt-12"
             >
-              <Button className="text-lg px-8 py-4">
+              <Button href="#contact-form" className="text-lg px-8 py-4">
                 Augment your team today
               </Button>
             </motion.div>
@@ -140,7 +140,7 @@ const AlternativeHero = () => {
             {/* Network Diagram - Custom React Component */}
             <div className="relative w-full max-w-lg mx-auto h-[500px] max-[470px]:h-[550px]">
               
-              {/* Developer 1 - Frontend (Top Left) - Responsive positioning with custom breakpoint */}
+              {/* Developer 1 - Full Stack (Top Left) - Responsive positioning with custom breakpoint */}
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -150,14 +150,14 @@ const AlternativeHero = () => {
                 <div className="text-center">
                   <img 
                     src={umarDurrani} 
-                    alt="Frontend Developer"
+                    alt="Full Stack Developer"
                     className="w-20 h-20 rounded-full mx-auto mb-2 object-cover shadow-lg border-2 border-purple-400/30"
                   />
-                  <p className="text-purple-300 text-xs font-medium max-[470px]:text-[10px]">Frontend Developer</p>
+                  <p className="text-purple-300 text-xs font-medium max-[470px]:text-[10px]">Full Stack Developer</p>
                 </div>
               </motion.div>
 
-              {/* Developer 2 - Full Stack (Top Center) - Responsive positioning */}
+              {/* Developer 2 - AI/ML (Top Center) - Responsive positioning */}
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -167,14 +167,14 @@ const AlternativeHero = () => {
                 <div className="text-center">
                   <img 
                     src={joshHawkins} 
-                    alt="Full Stack Developer"
+                    alt="AI/ML Developer"
                     className="w-20 h-20 rounded-full mx-auto mb-2 object-cover shadow-lg border-2 border-purple-400/30"
                   />
-                  <p className="text-purple-300 text-xs font-medium max-[470px]:text-[10px]">Full Stack Developer</p>
+                  <p className="text-purple-300 text-xs font-medium max-[470px]:text-[10px]">AI/ML Developer</p>
                 </div>
               </motion.div>
 
-              {/* Developer 3 - Backend (Top Right) - Responsive positioning with custom breakpoint */}
+              {/* Developer 3 - DevOps (Top Right) - Responsive positioning with custom breakpoint */}
               <motion.div
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -184,10 +184,10 @@ const AlternativeHero = () => {
                 <div className="text-center">
                   <img 
                     src={davinRobert} 
-                    alt="Backend Developer"
+                    alt="DevOps Engineer"
                     className="w-20 h-20 rounded-full mx-auto mb-2 object-cover shadow-lg border-2 border-purple-400/30"
                   />
-                  <p className="text-purple-300 text-xs font-medium max-[470px]:text-[10px]">Backend Developer</p>
+                  <p className="text-purple-300 text-xs font-medium max-[470px]:text-[10px]">DevOps Engineer</p>
                 </div>
               </motion.div>
 

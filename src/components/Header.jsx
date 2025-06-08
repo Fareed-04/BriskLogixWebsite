@@ -101,7 +101,10 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <Button className="hidden lg:flex" href="#Collaboration">
+        <Button 
+          className="hidden lg:flex" 
+          href={pathname.pathname === '/staff-augmentation' ? '#contact-form' : '#Collaboration'}
+        >
           contact us
         </Button>
 
