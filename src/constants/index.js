@@ -74,12 +74,17 @@ export const navigation = [
       },
       {
         id: "0-3",
-        title: "Microsoft ERP Implementation",
+        title: "Microsoft Dynamics ERP",
         url: "#Services"
       },
       {
         id: "0-4",
-        title: "Project Management",
+        title: "Custom Software Development",
+        url: "#Services"
+      },
+      {
+        id: "0-5",
+        title: "Cyber Security",
         url: "#Services"
       }
     ]
@@ -284,7 +289,7 @@ export const benefits = [
   {
     id: "0",
     title: "Staff Augmentation",
-    text: "Gain instant access to skilled professionals with our premier staff augmentation services, ensuring your team scales effortlessly to meet business demands.",
+    text: "Short-term project? Skill gap? We provide qualified IT professionals on demand—developers, engineers, and more—who integrate seamlessly into your team, so you only pay for what you need, when you need it.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -308,28 +313,52 @@ export const benefits = [
   },
   {
     id: "3",
-    title: "Web Application Development",
-    text: "Build cutting-edge web applications that drive engagement, streamline operations, and deliver exceptional user experiences tailored to your needs.",
+    title: "Custom Software Development",
+    text: "We build tailor-made applications that fit your unique needs—whether it's an internal tool, a customer portal, or a completely new product. Unlike off-the-shelf software, bespoke solutions ensure every feature is designed around your business goals",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
   {
     id: "4",
-    title: "Mobile Application Development",
-    text: "Transform ideas into intuitive and robust mobile applications designed to elevate your brand and connect you with users globally.",
+    title: "Legacy Code Integration",
+    text: "Many companies rely on older systems—built years ago in outdated languages or frameworks—that are hard to update or maintain. We modernize and refactor that \"legacy\" code so it runs smoothly on today's platforms, reduces errors, and lets you add new features without starting from scratch",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
     light: true,
   },
-
   {
     id: "5",
-    title: "Shopify and WordPress Development",
-    text: "Launch and optimize your online store with seamless Shopify and e-commerce development services designed for conversion and scalability.",
+    title: "E-Commerce Solutions",
+    text: "From online storefronts to payment gateways and inventory systems, we create and optimize every component of your digital shop—making it easy for customers to browse, buy, and return products.",
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "6",
+    title: "Cyber Security",
+    text: "Our security audits examine your networks, applications, and data storage to spot vulnerabilities—then we help you implement fixes and best practices, protecting you from hackers and ensuring compliance with regulations.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    iconUrl: benefitIcon3,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "7",
+    title: "Web & App Development and Maintenance",
+    text: "We design and develop modern websites and mobile apps, then provide ongoing support—updates, bug fixes, and performance tuning—so your digital presence stays secure and up-to-date.",
+    backgroundUrl: "./src/assets/benefits/card-2.svg",
+    iconUrl: benefitIcon4,
+    imageUrl: benefitImage2,
+    light: true,
+  },
+  {
+    id: "8",
+    title: "Digital Marketing",
+    text: "We boost your online visibility through Search Engine Optimization (SEO)—optimizing your content and site structure so search engines rank you higher, driving organic traffic and leads.",
+    backgroundUrl: "./src/assets/benefits/card-3.svg",
+    iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
   },
 ];

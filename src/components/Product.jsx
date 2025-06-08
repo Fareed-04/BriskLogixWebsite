@@ -7,6 +7,7 @@ import { LeftLine, RightLine } from "./design/Pricing";
 import { collabContent, collabText, collabApps } from "../constants";
 import Button from "./Button";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
+import FAQ from "./FAQ";
 
 const Product = () => {
   return (
@@ -93,6 +94,9 @@ const Product = () => {
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <FAQ />
     </Section>
   );
 };

@@ -15,32 +15,35 @@ const Benefits = () => {
           title="Delivering Excellence, One Line of Code at a Time"
         />
 
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10 justify-items-center">
           {benefits.map((item) => (
             <Link
               to={item.id === "0" ? "/staff-augmentation" : "#"}
               key={item.id}
-              className={`block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] ${
+              className={`block relative p-0.5 bg-no-repeat bg-[length:100%_100%] w-full max-w-[24rem] h-[28rem] ${
                 item.id === "0" ? "cursor-pointer hover:opacity-90 transition-opacity" : ""
               }`}
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}
             >
-              <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
+              <div className="relative z-2 flex flex-col h-full p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5">{item.title}</h5>
-                <p className="body-2 mb-6 text-n-3">{item.text}</p>
-                <div className="flex items-center mt-auto">
+                <p className="body-2 mb-6 text-n-3 flex-grow">{item.text}</p>
+                <div className="flex items-center justify-between mt-auto pt-4">
                   <img
                     src={item.iconUrl}
                     width={48}
                     height={48}
                     alt={item.title}
+                    className="flex-shrink-0"
                   />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    {item.id === "0" ? "Learn More" : ""}
-                  </p>
-                  <Arrow />
+                  <div className="flex items-center">
+                    <p className="font-code text-xs font-bold text-n-1 uppercase tracking-wider mr-2">
+                      {item.id === "0" ? "Learn More" : ""}
+                    </p>
+                    <Arrow />
+                  </div>
                 </div>
               </div>
 
