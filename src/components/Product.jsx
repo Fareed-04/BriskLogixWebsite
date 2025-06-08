@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Section from "./Section";
 import { smallSphere, stars, check, brainwaveSymbol } from "../assets";
 import Heading from "./Heading";
@@ -40,7 +41,9 @@ const Product = () => {
               ))}
             </ul>
 
-            <Button>Try it now</Button>
+            <Link to="/staff-augmentation">
+              <Button>Try it now</Button>
+            </Link>
           </div>
 
           <div className="lg:ml-auto xl:w-[38rem] mt-4">
@@ -86,9 +89,6 @@ const Product = () => {
                   </li>
                 ))}
               </ul>
-
-              <LeftCurve />
-              <RightCurve />
             </div>
           </div>
         </div>

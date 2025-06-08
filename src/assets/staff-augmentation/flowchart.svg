@@ -1,0 +1,46 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="160" width="180" height="80" rx="20" fill="#AC6AFF" fill-opacity="0.2" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="140" y="205" text-anchor="middle" font-family="Arial" font-size="16" fill="#FFFFFF">Client Needs</text>
+  
+  <path d="M230 200 L320 200" stroke="#AC6AFF" stroke-width="2" stroke-dasharray="5 5"/>
+  <polygon points="320,200 310,195 310,205" fill="#AC6AFF"/>
+  
+  <rect x="320" y="160" width="180" height="80" rx="20" fill="#AC6AFF" fill-opacity="0.4" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="410" y="205" text-anchor="middle" font-family="Arial" font-size="16" fill="#FFFFFF">BriskLogix Match</text>
+  
+  <path d="M500 200 L590 200" stroke="#AC6AFF" stroke-width="2" stroke-dasharray="5 5"/>
+  <polygon points="590,200 580,195 580,205" fill="#AC6AFF"/>
+  
+  <rect x="590" y="160" width="180" height="80" rx="20" fill="#AC6AFF" fill-opacity="0.6" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="680" y="205" text-anchor="middle" font-family="Arial" font-size="16" fill="#FFFFFF">Seamless Integration</text>
+  
+  <circle cx="140" cy="80" r="40" fill="#1A1A32" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="140" y="85" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Identify</text>
+  <path d="M140 120 L140 160" stroke="#AC6AFF" stroke-width="2"/>
+  <polygon points="140,160 135,150 145,150" fill="#AC6AFF"/>
+  
+  <circle cx="410" cy="80" r="40" fill="#1A1A32" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="410" y="85" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Select</text>
+  <path d="M410 120 L410 160" stroke="#AC6AFF" stroke-width="2"/>
+  <polygon points="410,160 405,150 415,150" fill="#AC6AFF"/>
+  
+  <circle cx="680" cy="80" r="40" fill="#1A1A32" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="680" y="85" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Integrate</text>
+  <path d="M680 120 L680 160" stroke="#AC6AFF" stroke-width="2"/>
+  <polygon points="680,160 675,150 685,150" fill="#AC6AFF"/>
+  
+  <circle cx="140" cy="320" r="40" fill="#1A1A32" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="140" y="325" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Assess</text>
+  <path d="M140 240 L140 280" stroke="#AC6AFF" stroke-width="2"/>
+  <polygon points="140,280 135,270 145,270" fill="#AC6AFF"/>
+  
+  <circle cx="410" cy="320" r="40" fill="#1A1A32" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="410" y="325" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Onboard</text>
+  <path d="M410 240 L410 280" stroke="#AC6AFF" stroke-width="2"/>
+  <polygon points="410,280 405,270 415,270" fill="#AC6AFF"/>
+  
+  <circle cx="680" cy="320" r="40" fill="#1A1A32" stroke="#AC6AFF" stroke-width="2"/>
+  <text x="680" y="325" text-anchor="middle" font-family="Arial" font-size="14" fill="#FFFFFF">Support</text>
+  <path d="M680 240 L680 280" stroke="#AC6AFF" stroke-width="2"/>
+  <polygon points="680,280 675,270 685,270" fill="#AC6AFF"/>
+</svg> 

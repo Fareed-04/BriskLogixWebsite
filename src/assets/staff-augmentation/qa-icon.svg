@@ -1,0 +1,11 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" rx="40" fill="#AC6AFF" fill-opacity="0.1"/>
+  <path d="M20 35L35 20L50 35L35 50L20 35Z" stroke="#AC6AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 50L50 65L35 80L20 65L35 50Z" stroke="#AC6AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.4"/>
+  <path d="M50 35L65 20L80 35L65 50L50 35Z" stroke="#AC6AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.4"/>
+  <path d="M35 20V10" stroke="#AC6AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M50 35H60" stroke="#AC6AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 50V60" stroke="#AC6AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 35H10" stroke="#AC6AFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="35" cy="35" r="5" fill="#AC6AFF" fill-opacity="0.4"/>
+</svg> 

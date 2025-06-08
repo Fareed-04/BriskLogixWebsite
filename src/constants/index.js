@@ -56,6 +56,33 @@ export const navigation = [
     id: "0",
     title: "Services",
     url: "#Services",
+    dropdown: [
+      {
+        id: "0-0",
+        title: "Staff Augmentation",
+        url: "/staff-augmentation"
+      },
+      {
+        id: "0-1",
+        title: "Web & App Development",
+        url: "#Services"
+      },
+      {
+        id: "0-2",
+        title: "AI Integration",
+        url: "#Services"
+      },
+      {
+        id: "0-3",
+        title: "Microsoft ERP Implementation",
+        url: "#Services"
+      },
+      {
+        id: "0-4",
+        title: "Project Management",
+        url: "#Services"
+      }
+    ]
   },
   {
     id: "1",
@@ -213,37 +240,43 @@ export const collabApps = [
 export const Product = [
   {
     id: "0",
-    title: "Make your Team",
-    description: "Scale your team with skilled professionals through our staff augmentation services",
-    price: null,
+    title: "Staff Augmentation",
+    description: "Scale your team with elite talent on demand. Access specialized skills and expertise when you need them.",
+    backgroundUrl: "/src/assets/background-1.jpg",
     features: [
-      "Access to pre-vetted talent",
       "Flexible engagement models",
-      "Seamless team integration",
-    ],
+      "Quick onboarding process",
+      "Dedicated team members",
+      "Cost-effective solution",
+      "Seamless integration"
+    ]
   },
   {
     id: "1",
-    title: "Build Your Idea from Scratch",
-    description: "Quality and high-end software solutions tailored to your requirements",
-    price: null,
+    title: "Web & App Development",
+    description: "Build powerful, scalable web and mobile applications that drive business growth.",
+    backgroundUrl: "/src/assets/background-2.jpg",
     features: [
-      "Budget Friendly and Quick",
-      "Complementary Add-on Features",
-      "Standing out in competition",
-    ],
+      "Custom web development",
+      "Mobile app development",
+      "Progressive web apps",
+      "E-commerce solutions",
+      "API development"
+    ]
   },
   {
     id: "2",
-    title: "Work on Existing Product",
-    description: "Seamlessly improving already-made solutions",
-    price: null,
+    title: "AI Integration",
+    description: "Leverage the power of artificial intelligence to automate processes and gain valuable insights.",
+    backgroundUrl: "/src/assets/background-3.jpg",
     features: [
-      "Priority support to solve issues quickly",
-      "Maintenance and improvement",
-      "Ability to explore the product and retune its features",
-    ],
-  },
+      "Machine learning solutions",
+      "Natural language processing",
+      "Computer vision",
+      "Predictive analytics",
+      "AI-powered automation"
+    ]
+  }
 ];
 
 export const benefits = [

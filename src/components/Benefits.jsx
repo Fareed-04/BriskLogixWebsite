@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
@@ -7,7 +8,7 @@ import ClipPath from "../assets/svg/ClipPath";
 
 const Benefits = () => {
   return (
-     <Section className="overflow-hidden" id="Services">
+    <Section className="overflow-hidden" id="Services">
       <div className="container relative z-2 mt-20">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
@@ -16,12 +17,15 @@ const Benefits = () => {
 
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
-            <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
+            <Link
+              to={item.id === "0" ? "/staff-augmentation" : "#"}
+              key={item.id}
+              className={`block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] ${
+                item.id === "0" ? "cursor-pointer hover:opacity-90 transition-opacity" : ""
+              }`}
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
               }}
-              key={item.id}
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5">{item.title}</h5>
@@ -34,7 +38,7 @@ const Benefits = () => {
                     alt={item.title}
                   />
                   <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    
+                    {item.id === "0" ? "Learn More" : ""}
                   </p>
                   <Arrow />
                 </div>
@@ -60,7 +64,7 @@ const Benefits = () => {
               </div>
 
               <ClipPath />
-            </div>
+            </Link>
           ))}
         </div>
       </div>
