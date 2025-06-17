@@ -50,10 +50,11 @@ const Footer = () => {
             <h3 className="text-[#AC6AFF] text-xl font-bold mb-4">Services</h3>
             <ul className="space-y-2">
               <li className="text-n-3">Staff Augmentation</li>
-              <li className="text-n-3">Web & App Development</li>
-              <li className="text-n-3">AI Integration</li>
-              <li className="text-n-3">Microsoft ERP Implementation</li>
-              <li className="text-n-3">Project Management</li>
+              <li className="text-n-3">Custom Software Solutions</li>
+              <li className="text-n-3">E-commerce Solutions</li>
+              <li className="text-n-3">Digital Marketing</li>
+              <li className="text-n-3">Microsoft Dynamics ERP</li>
+              <li className="text-n-3">AR/VR Development</li>
             </ul>
           </div>
 
@@ -61,12 +62,12 @@ const Footer = () => {
           <div>
             <h3 className="text-[#AC6AFF] text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Home</a></li>
-              <li><a href="#Services" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Services</a></li>
-              <li><a href="#Collaboration" className="text-n-3 hover:text-[#AC6AFF] transition-colors">About Us</a></li>
-              <li><a href="#Product" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Offerings</a></li>
-              <li><a href="#Portfolio" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Portfolio</a></li>
-              <li><a href="#Collaboration" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Contact Us</a></li>
+              <li><a href="/" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Home</a></li>
+              <li><a href="/staff-augmentation" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Staff Augmentation</a></li>
+              <li><a href="/custom-software-solutions" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Custom Software</a></li>
+              <li><a href="/e-commerce-solutions" className="text-n-3 hover:text-[#AC6AFF] transition-colors">E-commerce</a></li>
+              <li><a href="/digital-marketing" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Digital Marketing</a></li>
+              <li><a href="/#welcome" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Contact Us</a></li>
             </ul>
           </div>
 

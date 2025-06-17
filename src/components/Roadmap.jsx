@@ -58,7 +58,24 @@ const Roadmap = () => (
                     />
                   </div>
                   <h4 className="h4 mb-4">{item.title}</h4>
-                  <p className="body-2 text-n-4">{item.text}</p>
+                  <p className="body-2 text-n-4 mb-6">{item.text}</p>
+                  
+                  {/* Tech Stack */}
+                  {item.techStack && (
+                    <div className="flex items-center gap-3 mt-4">
+                      <span className="text-sm text-n-4 mr-2">Built with:</span>
+                      {item.techStack.map((tech, index) => (
+                        <div key={index} className="flex items-center justify-center w-8 h-8 bg-n-7 rounded-lg hover:bg-n-6 transition-colors duration-300">
+                          <img 
+                            src={tech.icon} 
+                            alt={tech.name}
+                            className="w-5 h-5 object-contain"
+                            title={tech.name}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

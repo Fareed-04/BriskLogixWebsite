@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Section from "./Section";
-import { smallSphere, stars, check, brainwaveSymbol } from "../assets";
+import { smallSphere, stars, check, briskLogixLogo } from "../assets";
 import Heading from "./Heading";
 import PricingList from "./PricingList";
 import { LeftLine, RightLine } from "./design/Pricing";
@@ -57,10 +57,11 @@ const Product = () => {
                 <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                   <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
                     <img
-                      src={brainwaveSymbol}
+                      src={briskLogixLogo}
                       width={48}
-                      height={48}
-                      alt="brainwave"
+                      height={25}
+                      alt="BriskLogix"
+                      className="object-contain"
                     />
                   </div>
                 </div>

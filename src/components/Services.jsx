@@ -5,7 +5,6 @@ import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import {
   PhotoChatMessage,
   Gradient,
-  VideoBar,
   VideoChatMessage,
 } from "./design/Services";
 
@@ -111,7 +110,6 @@ const Services = () => {
                 />
 
                 <VideoChatMessage />
-                <VideoBar />
               </div>
             </div>
           </div>

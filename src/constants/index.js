@@ -49,7 +49,9 @@ import swift from '../assets/collaboration/swift.png';
 import lawin from '../assets/lawin.jpg';
 import axlefleets from '../assets/axlefleets.png';
 import maverick from '../assets/maverick.png';
-import eduease from '../assets/eduease.png'
+import eduease from '../assets/eduease.png';
+import panoraProperties from '../assets/images/Panora properties.png';
+import panoraVirtualTours from '../assets/images/PANORA Virtual Tours.png';
 
 export const navigation = [
   {
@@ -60,32 +62,38 @@ export const navigation = [
       {
         id: "0-0",
         title: "Staff Augmentation",
-        url: "/staff-augmentation"
+        url: "/staff-augmentation",
+        description: "Qualified IT professionals on demand who integrate seamlessly into your team"
       },
       {
         id: "0-1",
-        title: "Web & App Development",
-        url: "#Services"
+        title: "Custom Software Solutions",
+        url: "/custom-software-solutions",
+        description: "Tailor-made applications for web, mobile, enterprise, and SaaS solutions"
       },
       {
         id: "0-2",
-        title: "AI Integration",
-        url: "#Services"
+        title: "General AI Solutions & Automations",
+        url: "#Services",
+        description: "AI-powered chatbots, process automation, and computer vision solutions"
       },
       {
         id: "0-3",
-        title: "Microsoft Dynamics ERP",
-        url: "#Services"
+        title: "E-commerce Solutions",
+        url: "/e-commerce-solutions",
+        description: "Complete e-commerce ecosystem with Shopify optimization and custom development"
       },
       {
         id: "0-4",
-        title: "Custom Software Development",
-        url: "#Services"
+        title: "Microsoft Dynamics ERP",
+        url: "#Services",
+        description: "Seamless integration, smarter workflows, and data-driven decision-making"
       },
       {
         id: "0-5",
-        title: "Cyber Security",
-        url: "#Services"
+        title: "Digital Marketing",
+        url: "/digital-marketing",
+        description: "SEO, LLMEO strategies, social media management, and performance analytics"
       }
     ]
   },
@@ -96,11 +104,16 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "Offerings",
-    url: "#Product",
+    title: "Reviews",
+    url: "#Reviews",
   },
   {
     id: "3",
+    title: "Why Choose Us",
+    url: "#whychooseus",
+  },
+  {
+    id: "4",
     title: "Portfolio",
     url: "#Portfolio",
   },
@@ -132,10 +145,16 @@ export const Portfolio = [
     id: "0",
     title: "LawInn",
     text: "A freelance platform for lawyers with an AI Law assistant chatbot.",
-    date: "Dec 2024",
+    date: "March 2025",
     status: "In Progress",
     imageUrl: lawin,
     colorful: true,
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Node.js", icon: node },
+      { name: "MongoDB", icon: mongodb },
+      { name: "Python", icon: python }
+    ]
   },
   {
     id: "1",
@@ -143,24 +162,40 @@ export const Portfolio = [
     text: "A logistics and dispatching web app where all bookings are scheduled seamlessly.",
     date: "June 2024",
     status: "Completed",
-    imageUrl: axlefleets ,
+    imageUrl: axlefleets,
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Node.js", icon: node },
+      { name: "MongoDB", icon: mongodb }
+    ]
   },
   {
     id: "2",
-    title: "Maverick Real Estate",
-    text: "Allows customers to browse properties and find the best fit for themselves.",
+    title: "Panora Properties",
+    text: "AI-powered price and property advisor and buy-sell platform with virtual tours.",
     date: "March 2024",
-    status: "Completed",
-    imageUrl: maverick,
+    status: "In Progress",
+    imageUrl: panoraProperties,
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Node.js", icon: node },
+      { name: "Python", icon: python },
+      { name: "MongoDB", icon: mongodb }
+    ]
   },
   {
     id: "3",
-    title: "Edu Ease",
-    text: "Fully automated AI-powered education system.",
-    date: "Nov 2024",
-    status: "In Progress",
-    imageUrl: eduease,
-    colorful:true,
+    title: "Panora Virtual Tours",
+    text: "Premium and pioneer of interactive Virtual Tours in Pakistan.",
+    date: "January 2025",
+    status: "Completed",
+    imageUrl: panoraVirtualTours,
+    colorful: true,
+    techStack: [
+      { name: "React", icon: react },
+      { name: "Node.js", icon: node },
+      { name: "MongoDB", icon: mongodb }
+    ]
   },
 ];
 
@@ -285,7 +320,6 @@ export const Product = [
 ];
 
 export const benefits = [
-  
   {
     id: "0",
     title: "Staff Augmentation",
@@ -297,68 +331,43 @@ export const benefits = [
   },
   {
     id: "1",
-    title: "Generative AI Solutions",
+    title: "Custom Software Solutions",
+    text: "We build tailor-made applications that fit your unique needs—whether it's web, mobile, enterprise, legacy system modernization, SaaS, or ongoing maintenance. Every feature is designed around your business goals.",
+    backgroundUrl: "./src/assets/benefits/card-1.svg",
+    iconUrl: benefitIcon1,
+    imageUrl: benefitImage2,
+  },
+  {
+    id: "2",
+    title: "General AI Solutions & Automations",
     text: "Revolutionize operations with AI-powered chatbots, process automation, and advanced computer vision for proactive hazard detection and enhanced security.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
   },
   {
-    id: "2",
-    title: "Microsoft Dynamics ERP Solutions",
-    text: "Unlock your business potential with MS Dynamics ERP solutions, delivering seamless integration, smarter workflows, and data-driven decision-making.",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
-  },
-  {
     id: "3",
-    title: "Custom Software Development",
-    text: "We build tailor-made applications that fit your unique needs—whether it's an internal tool, a customer portal, or a completely new product. Unlike off-the-shelf software, bespoke solutions ensure every feature is designed around your business goals",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
-    iconUrl: benefitIcon1,
+    title: "E-commerce Solutions",
+    text: "Complete e-commerce ecosystem including Shopify store setup & optimization, custom development, payment processing, inventory management, and comprehensive supply chain solutions to maximize your online sales potential.",
+    backgroundUrl: "./src/assets/benefits/card-6.svg",
+    iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
   },
   {
     id: "4",
-    title: "Legacy Code Integration",
-    text: "Many companies rely on older systems—built years ago in outdated languages or frameworks—that are hard to update or maintain. We modernize and refactor that \"legacy\" code so it runs smoothly on today's platforms, reduces errors, and lets you add new features without starting from scratch",
-    backgroundUrl: "./src/assets/benefits/card-4.svg",
-    iconUrl: benefitIcon4,
+    title: "Microsoft Dynamics ERP",
+    text: "Unlock your business potential with MS Dynamics ERP solutions, delivering seamless integration, smarter workflows, and data-driven decision-making.",
+    backgroundUrl: "./src/assets/benefits/card-5.svg",
+    iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
     light: true,
   },
   {
     id: "5",
-    title: "E-Commerce Solutions",
-    text: "From online storefronts to payment gateways and inventory systems, we create and optimize every component of your digital shop—making it easy for customers to browse, buy, and return products.",
-    backgroundUrl: "./src/assets/benefits/card-6.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "6",
-    title: "Cyber Security",
-    text: "Our security audits examine your networks, applications, and data storage to spot vulnerabilities—then we help you implement fixes and best practices, protecting you from hackers and ensuring compliance with regulations.",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
-    iconUrl: benefitIcon3,
-    imageUrl: benefitImage2,
-  },
-  {
-    id: "7",
-    title: "Web & App Development and Maintenance",
-    text: "We design and develop modern websites and mobile apps, then provide ongoing support—updates, bug fixes, and performance tuning—so your digital presence stays secure and up-to-date.",
-    backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl: benefitIcon4,
-    imageUrl: benefitImage2,
-    light: true,
-  },
-  {
-    id: "8",
     title: "Digital Marketing",
-    text: "We boost your online visibility through Search Engine Optimization (SEO)—optimizing your content and site structure so search engines rank you higher, driving organic traffic and leads.",
+    text: "Comprehensive digital presence enhancement including advanced SEO, innovative LLMEO strategies, social media management, targeted advertising, content marketing, and performance analytics to dominate your market.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
-    iconUrl: benefitIcon1,
+    iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
   },
 ];

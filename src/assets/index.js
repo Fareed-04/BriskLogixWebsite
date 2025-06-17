@@ -1,4 +1,6 @@
 import brainwave from "./brainwave.svg";
+import briskLogixLogo from "./images/Brisk Logix Inverted Logo.png";
+import heroBackgroundImage from "./images/image (1).png";
 import check from "./check.svg";
 import brainwaveSymbol from "./brainwave-symbol.svg";
 import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
@@ -77,6 +79,8 @@ import twitter from "./socials/twitter.svg";
 
 export {
   brainwave,
+  briskLogixLogo,
+  heroBackgroundImage,
   check,
   check2,
   loading1,

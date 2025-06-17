@@ -5,8 +5,7 @@ import AlternativeHero from './AlternativeHero';
 import Explanation from './Explanation';
 import Process from './Process';
 import TalentCategories from './TalentCategories';
-import WhyChooseUs from './WhyChooseUs';
-import ContactForm from './ContactForm';
+import WhyChooseUsWithForm from './WhyChooseUsWithForm';
 import ButtonGradient from '../../assets/svg/ButtonGradient';
 import { AnimatedLines } from '../../components/ui/animated-line';
 
@@ -19,8 +18,7 @@ const StaffAugmentation = () => {
         <Process />
         <Explanation />
         <TalentCategories />
-        <WhyChooseUs />
-        <ContactForm />
+        <WhyChooseUsWithForm />
         <Footer />
         <AnimatedLines />
       </div>
