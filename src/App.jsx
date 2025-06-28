@@ -15,6 +15,8 @@ import StaffAugmentation from "./pages/StaffAugmentation";
 import CustomSoftwareSolutions from "./pages/CustomSoftwareSolutions";
 import DigitalMarketing from "./pages/DigitalMarketing";
 import EcommerceSolutions from "./pages/EcommerceSolutions";
+import MicrosoftDynamics from "./pages/MicrosoftDynamics";
+import AIServices from "./pages/AIServices";
 import { Routes, Route } from "react-router-dom";
 
 // Component to handle scroll to top on route change
@@ -35,8 +37,10 @@ const App = () => {
       <Routes>
         <Route path="/staff-augmentation" element={<StaffAugmentation />} />
         <Route path="/custom-software-solutions" element={<CustomSoftwareSolutions />} />
+        <Route path="/ai-services" element={<AIServices />} />
         <Route path="/digital-marketing" element={<DigitalMarketing />} />
         <Route path="/ecommerce-solutions" element={<EcommerceSolutions />} />
+        <Route path="/microsoft-dynamics-erp" element={<MicrosoftDynamics />} />
         <Route
           path="/"
           element={

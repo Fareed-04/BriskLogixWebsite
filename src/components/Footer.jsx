@@ -51,6 +51,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="text-n-3">Staff Augmentation</li>
               <li className="text-n-3">Custom Software Solutions</li>
+              <li className="text-n-3">AI & Generative AI Services</li>
               <li className="text-n-3">E-commerce Solutions</li>
               <li className="text-n-3">Digital Marketing</li>
               <li className="text-n-3">Microsoft Dynamics ERP</li>
@@ -65,7 +66,9 @@ const Footer = () => {
               <li><a href="/" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Home</a></li>
               <li><a href="/staff-augmentation" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Staff Augmentation</a></li>
               <li><a href="/custom-software-solutions" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Custom Software</a></li>
-              <li><a href="/e-commerce-solutions" className="text-n-3 hover:text-[#AC6AFF] transition-colors">E-commerce</a></li>
+              <li><a href="/ai-services" className="text-n-3 hover:text-[#AC6AFF] transition-colors">AI Services</a></li>
+              <li><a href="/ecommerce-solutions" className="text-n-3 hover:text-[#AC6AFF] transition-colors">E-commerce</a></li>
+              <li><a href="/microsoft-dynamics-erp" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Microsoft Dynamics ERP</a></li>
               <li><a href="/digital-marketing" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Digital Marketing</a></li>
               <li><a href="/#welcome" className="text-n-3 hover:text-[#AC6AFF] transition-colors">Contact Us</a></li>
             </ul>

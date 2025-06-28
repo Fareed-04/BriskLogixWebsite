@@ -73,20 +73,20 @@ export const navigation = [
       },
       {
         id: "0-2",
-        title: "General AI Solutions & Automations",
-        url: "#Services",
-        description: "AI-powered chatbots, process automation, and computer vision solutions"
+        title: "AI & Generative AI Services",
+        url: "/ai-services",
+        description: "AI-powered solutions including ML, NLP, computer vision, and generative AI content creation"
       },
       {
         id: "0-3",
         title: "E-commerce Solutions",
-        url: "/e-commerce-solutions",
+        url: "/ecommerce-solutions",
         description: "Complete e-commerce ecosystem with Shopify optimization and custom development"
       },
       {
         id: "0-4",
         title: "Microsoft Dynamics ERP",
-        url: "#Services",
+        url: "/microsoft-dynamics-erp",
         description: "Seamless integration, smarter workflows, and data-driven decision-making"
       },
       {
@@ -275,6 +275,13 @@ export const collabApps = [
     width: 38,
     height: 32,
   },
+  {
+    id: "8",
+    title: "shopify",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg",
+    width: 34,
+    height: 34,
+  },
 ];
 
 export const Product = [
@@ -339,8 +346,8 @@ export const benefits = [
   },
   {
     id: "2",
-    title: "General AI Solutions & Automations",
-    text: "Revolutionize operations with AI-powered chatbots, process automation, and advanced computer vision for proactive hazard detection and enhanced security.",
+    title: "AI & Generative AI Services",
+    text: "Transform your business with cutting-edge AI and Generative AI solutions including machine learning, natural language processing, computer vision, content creation, and intelligent automation systems.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,

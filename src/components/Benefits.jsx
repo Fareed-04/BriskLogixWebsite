@@ -22,15 +22,15 @@ const Benefits = () => {
               switch(id) {
                 case "0": return "/staff-augmentation";
                 case "1": return "/custom-software-solutions";
-                case "2": return "#"; // General AI Solutions - no page yet
+                case "2": return "/ai-services";
                 case "3": return "/ecommerce-solutions";
-                case "4": return "#"; // Microsoft Dynamics ERP - no page yet  
+                case "4": return "/microsoft-dynamics-erp";
                 case "5": return "/digital-marketing";
                 default: return "#";
               }
             };
 
-            const hasRoute = ["0", "1", "3", "5"].includes(item.id);
+            const hasRoute = ["0", "1", "2", "3", "4", "5"].includes(item.id);
 
             return (
               <Link

@@ -8,6 +8,8 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { FlickeringGrid } from "../../components/ui/flickering-grid";
 import ButtonGradient from "../../assets/svg/ButtonGradient";
+import shopifyLogo from "../../assets/images/Shopify logo no bg.jpeg";
+import shopifyLogoBg from "../../assets/images/Shopify logo.jpeg";
 
 const EcommerceSolutions = () => {
   const [formData, setFormData] = useState({
@@ -135,12 +137,51 @@ const EcommerceSolutions = () => {
     });
   };
   
+  // Key E-commerce Platforms for Hero Section
+  const keyPlatforms = [
+    {
+      id: "1",
+      title: "Shopify",
+      icon: shopifyLogo,
+      width: 120,
+      height: 60,
+    },
+    {
+      id: "2",
+      title: "WooCommerce",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/woocommerce/woocommerce-original.svg",
+      width: 80,
+      height: 80,
+    },
+    {
+      id: "3",
+      title: "PayPal",
+      icon: "https://www.vectorlogo.zone/logos/paypal/paypal-icon.svg",
+      width: 80,
+      height: 80,
+    },
+    {
+      id: "4",
+      title: "Stripe",
+      icon: "https://www.vectorlogo.zone/logos/stripe/stripe-icon.svg",
+      width: 80,
+      height: 80,
+    },
+    {
+      id: "5",
+      title: "Amazon",
+      icon: "https://www.vectorlogo.zone/logos/amazon/amazon-icon.svg",
+      width: 80,
+      height: 80,
+    }
+  ];
+
   // Extended e-commerce tech stack
   const ecommerceTechStack = [
     {
       id: "1",
       title: "Shopify",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg",
+      icon: shopifyLogo,
       width: 32,
       height: 32,
     },
@@ -276,6 +317,34 @@ const EcommerceSolutions = () => {
       icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg",
       width: 32,
       height: 32,
+    },
+    {
+      id: "21",
+      title: "Meta Business",
+      icon: "https://www.vectorlogo.zone/logos/facebook/facebook-icon.svg",
+      width: 32,
+      height: 32,
+    },
+    {
+      id: "22",
+      title: "Amazon Marketplace",
+      icon: "https://www.vectorlogo.zone/logos/amazon/amazon-icon.svg",
+      width: 32,
+      height: 32,
+    },
+    {
+      id: "23",
+      title: "Etsy",
+      icon: "https://www.vectorlogo.zone/logos/etsy/etsy-icon.svg",
+      width: 32,
+      height: 32,
+    },
+    {
+      id: "24",
+      title: "eBay",
+      icon: "https://www.vectorlogo.zone/logos/ebay/ebay-icon.svg",
+      width: 32,
+      height: 32,
     }
   ];
 
@@ -283,11 +352,11 @@ const EcommerceSolutions = () => {
 
   const services = [
     {
-      title: "Shopify Store Setup & Optimization",
-      description: "Complete Shopify store development with custom themes, apps, and optimization for maximum conversions.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-      hoverText: "Launch your Shopify store with professional design, seamless functionality, and conversion optimization.",
-      features: ["Custom Themes", "App Integration", "Payment Setup", "SEO Optimization"]
+      title: "Shopify Development",
+      description: "Complete Shopify store setup, customization, and optimization for maximum conversions and sales performance.",
+      image: shopifyLogoBg,
+      hoverText: "Build stunning Shopify stores with custom themes, app integrations, and conversion optimization.",
+      features: ["Custom Store Setup", "Theme Development", "App Integration", "Performance Optimization"]
     },
     {
       title: "Custom E-commerce Development",
@@ -412,7 +481,12 @@ const EcommerceSolutions = () => {
         
         {/* Hero Section */}
         <Section className="pt-[12rem] -mt-[5.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings id="hero">
-          <div className="container relative">
+          {/* Background Effects */}
+          <div className="absolute inset-0 bg-gradient-to-br from-n-8 via-n-7 to-n-8" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(76,29,149,0.3),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(34,197,94,0.2),transparent_50%)]" />
+          
+          <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-[6.25rem]">
               
               {/* Left Side - Text Content */}
@@ -423,25 +497,25 @@ const EcommerceSolutions = () => {
                 className="space-y-8"
               >
                 <h1 className="h1">
-                  Complete 
+                  E-commerce
                   <span className="block mt-2">
-                    <span className="bg-gradient-to-r from-purple-400 to-orange-300 bg-clip-text text-transparent">
-                      E-commerce Solutions
+                    <span className="bg-gradient-to-r from-purple-400 to-green-400 bg-clip-text text-transparent">
+                      Solutions
                     </span>
                   </span>
                 </h1>
                 
                 <p className="body-1 text-n-2 max-w-lg">
-                  From Shopify stores to custom e-commerce platforms, we provide end-to-end solutions including 
-                  supply chain management, payment integration, and delivery optimization for your online business success.
+                  Complete e-commerce ecosystem with Shopify optimization, custom development, 
+                  and comprehensive supply chain solutions to maximize your online sales potential.
                 </p>
                 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-6">
                   {[
-                    { number: "4+", label: "Years Experience" },
-                    { number: "99.9%", label: "Uptime Guarantee" },
-                    { number: "24/7", label: "Support Available" }
+                    { number: "50+", label: "Stores Built" },
+                    { number: "3x", label: "Avg. Sales Boost" },
+                    { number: "24/7", label: "Support" }
                   ].map((stat, index) => (
                     <div key={index} className="text-center">
                       <div className="text-2xl font-bold text-purple-400">{stat.number}</div>
@@ -466,19 +540,21 @@ const EcommerceSolutions = () => {
                 </div>
               </motion.div>
 
-              {/* Right Side - Tech Stack Diagram */}
+              {/* Right Side - Key Platforms Display */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative flex justify-center"
               >
+                {/* Glowing Background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-green-500/20 rounded-full blur-3xl"></div>
+                
                 <div className="relative w-[500px] h-[500px]">
-                  {ecommerceTechStack.map((tool, index) => {
-                    const angle = (index * (360 / ecommerceTechStack.length)) - 90;
+                  {keyPlatforms.map((platform, index) => {
+                    const angle = (index * (360 / keyPlatforms.length)) - 90;
                     const radian = (angle * Math.PI) / 180;
-                    const isInnerOrbit = index % 2 === 0;
-                    const radius = isInnerOrbit ? 150 : 200;
+                    const radius = 180;
                     const x = Math.cos(radian) * radius;
                     const y = Math.sin(radian) * radius;
                     
@@ -487,28 +563,33 @@ const EcommerceSolutions = () => {
                         key={index}
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={{ scale: 1.15, z: 10 }}
                         animate={{ 
-                          rotate: isInnerOrbit ? 360 : -360,
+                          rotate: 360,
                         }}
                         transition={{
-                          opacity: { duration: 0.5, delay: index * 0.1 },
-                          scale: { duration: 0.5, delay: index * 0.1, type: "spring", stiffness: 260, damping: 20 },
-                          rotate: { duration: isInnerOrbit ? 25 : 35, repeat: Infinity, ease: "linear" }
+                          opacity: { duration: 0.5, delay: index * 0.2 },
+                          scale: { duration: 0.5, delay: index * 0.2, type: "spring", stiffness: 260, damping: 20 },
+                          rotate: { duration: 30, repeat: Infinity, ease: "linear" }
                         }}
-                        className="absolute w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-xl cursor-pointer"
+                        className="absolute bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl cursor-pointer border border-white/20 hover:border-purple-400/50 transition-all duration-300"
                         style={{
-                          left: `calc(50% + ${x}px - 2rem)`,
-                          top: `calc(50% + ${y}px - 2rem)`,
+                          width: platform.title === 'Shopify' ? '140px' : '100px',
+                          height: platform.title === 'Shopify' ? '100px' : '100px',
+                          left: `calc(50% + ${x}px - ${platform.title === 'Shopify' ? '70px' : '50px'})`,
+                          top: `calc(50% + ${y}px - 50px)`,
                         }}
                       >
                         <img 
-                          src={tool.icon} 
-                          alt={tool.title}
-                          width={tool.width}
-                          height={tool.height}
-                          className="object-contain"
+                          src={platform.icon} 
+                          alt={platform.title}
+                          width={platform.width}
+                          height={platform.height}
+                          className="object-contain filter brightness-110"
                         />
+                        
+                        {/* Glowing effect for each platform */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-green-500/10 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                       </motion.div>
                     );
                   })}
@@ -520,10 +601,10 @@ const EcommerceSolutions = () => {
                     transition={{ duration: 0.8, delay: 0.5 }}
                     className="absolute inset-0 flex items-center justify-center"
                   >
-                    <div className="w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center shadow-2xl">
+                    <div className="w-32 h-32 bg-gradient-to-br from-purple-600 to-green-600 rounded-full flex items-center justify-center shadow-2xl">
                       <div className="text-center">
-                        <div className="text-white font-bold text-lg">EC</div>
-                        <div className="text-white text-xs opacity-80">Solutions</div>
+                        <div className="text-white font-bold text-lg">E-COM</div>
+                        <div className="text-white text-sm opacity-80">Hub</div>
                       </div>
                     </div>
                   </motion.div>
